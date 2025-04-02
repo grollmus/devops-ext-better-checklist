@@ -1,0 +1,21 @@
+name: publish
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: install npm dependencies
+        run: npm install
+        
+      - name: build extension
+        run: npm run compile
+        
+      - name: publish extenssion
+        run: tfx extension publish --publisher ${{ secrets.PUBLISHER_NAME }} --manifest-globs vss-extension.json --overrides-file configs/internal.json --token ${{ secrets.PAT_TOKEN }} --share-with ${{ secrets.SHARED_WITH }}    
