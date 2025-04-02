@@ -1,0 +1,19 @@
+{
+  "name": "devops-ext-better-checklist",
+  "description": "Devops add-on for creating and managing checklists",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Gollmuss GmbH",
+  "keywords": [
+    "azure-devops",
+    "add-on",
+    "checklist"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "initdev:npm": "npm install"
+  },
+  "dependencies": {
+    "azure-devops-extension-sdk": "^4.0.2"
+  }
+}

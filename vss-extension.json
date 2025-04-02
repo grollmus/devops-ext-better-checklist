@@ -1,0 +1,37 @@
+{
+  "manifestVersion": 1,
+  "id": "devops-ext-better-checklist",
+  "publisher": "Grollmus GmbH",
+  "version": "0.1.0",
+  "name": "Better checklist extension",
+  "description": "Devops add-on for creating and managing checklists",
+  "public": false,
+  "categories": ["Azure Repos"],
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "devops-ext-better-checklist",
+      "type": "ms.vss-web.hub",
+      "targets": ["ms.vss-code-web.code-hub-group"],
+      "properties": {
+        "name": "Better checklist",
+        "uri": "my-hub.html"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "my-hub.html",
+      "addressable": true
+    },
+    {
+      "path": "node_modules/azure-devops-extension-sdk",
+      "addressable": true,
+      "packagePath": "lib"
+    }
+  ]
+}
