@@ -16,8 +16,9 @@
     {
       "id": "devops-ext-better-checklist",
       "type": "ms.vss-web.hub",
-      "targets": ["ms.vss-code-web.code-hub-group"],
+      "targets": ["ms.vss-work-web.work-hub-group"],
       "properties": {
+        "iconName": "TaskList",
         "name": "Better checklist",
         "uri": "my-hub.html"
       }
