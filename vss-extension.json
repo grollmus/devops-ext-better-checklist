@@ -25,7 +25,7 @@
   ],
   "files": [
     {
-      "path": "my-hub.html",
+      "path": "src/my-hub.html",
       "addressable": true
     },
     {
