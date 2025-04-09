@@ -1,25 +1,33 @@
 import * as React from "react";
-import {JSX} from "react";
-import * as SDK from "azure-devops-extension-sdk";
-import {showRootComponent} from "../common";
+import { Card } from "azure-devops-ui/Card";
+import { Header, IHeaderBreakpointCommandItem, TitleSize } from "azure-devops-ui/Header";
+import { Page } from "azure-devops-ui/Page";
+export default class HeaderExample extends React.Component<{}> {
+    barItems: IHeaderBreakpointCommandItem[] = [
+        {
+            id: "command1",
+            iconProps: { iconName: "OpenSource" },
+            text: "Command 1",
+            important: true,
+            tooltipProps: { text: 'tool tip' },
+        }
+    ];
 
-export class HomePage extends React.Component<{}, {}> {
-    public componentDidMount() {
-        SDK.init();
-    }
-
-    public render() : JSX.Element {
+    public render() {
         return (
-            <div style={{width:"100%"}}>
-                <h1>My first extension</h1>
-                <div className="page-content flex-grow" style={{marginTop: "20px", marginLeft: "20px", marginRight: "20px"}}>
-                    <p>Page content</p>
+            <Page>
+                <Header
+                    title={"Hello Title"}
+                    commandBarItems={this.barItems}
+                    titleSize={TitleSize.Medium}
+                    titleIconProps={{ iconName: "OpenSource" }}
+                    titleAriaLevel={3}
+                />
+
+                <div className="page-content page-content-top">
+                    <Card>Page content</Card>
                 </div>
-            </div>
+            </Page>
         );
     }
 }
-export default HomePage;
-
-
-showRootComponent(<HomePage />);
