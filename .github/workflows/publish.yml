@@ -11,3 +11,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          
+      - name: install npm dependencies
+        run: npm install
+        
+      - name: build extension
+        run: npm run compile
+        
+      - name: publish extension
+        run: npx tfx extension publish --publisher ${{ secrets.PUBLISHER_NAME }} --manifest-globs vss-extension.json --token ${{ secrets.PAT_TOKEN }} --share-with ${{ secrets.SHARED_WITH }}

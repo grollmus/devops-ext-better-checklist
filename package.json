@@ -1,0 +1,41 @@
+{
+  "name": "devops-ext-better-checklist",
+  "description": "Devops add-on for creating and managing checklists",
+  "version": "0.1.9",
+  "author": "Gollmuss GmbH",
+  "keywords": [
+    "azure-devops",
+    "add-on",
+    "checklist"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "clean": "rimraf ./dist ./out",
+    "initdev:npm": "npm install",
+    "compile": "npm run clean && webpack --mode production --config webpack.config.js",
+    "compile:dev": "npm run clean && webpack --mode development --config webpack.config.js",
+    "package": "npm run compile && tfx extension create --manifest-globs vss-extension.json --output-path out",
+    "package:dev": "npm run compile:dev && tfx extension create --manifest-globs vss-extension.json --output-path out",
+    "publish": "npm run compile && tfx extension publish --manifest-globs vss-extension.json --output-path out",
+    "publish:dev": "npm run compile:dev && tfx extension publish --manifest-globs vss-extension.json --output-path out",
+    "start:dev": "webpack-dev-server --mode development"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.2",
+    "@webpack-cli/generators": "^3.0.7",
+    "copy-webpack-plugin": "^13.0.0",
+    "tfx-cli": "^0.21.1",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "dependencies": {
+    "azure-devops-extension-api": "^4.248.1",
+    "azure-devops-extension-sdk": "^4.0.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
