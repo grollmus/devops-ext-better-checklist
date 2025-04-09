@@ -18,5 +18,5 @@ jobs:
       - name: build extension
         run: npm run compile
         
-      - name: publish extenssion
+      - name: publish extension
         run: npx tfx extension publish --publisher ${{ secrets.PUBLISHER_NAME }} --manifest-globs vss-extension.json --token ${{ secrets.PAT_TOKEN }} --share-with ${{ secrets.SHARED_WITH }}

@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "devops-ext-better-checklist",
   "publisher": "Grollmus GmbH",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "name": "Better checklist extension",
   "description": "Devops add-on for creating and managing checklists",
   "public": false,
@@ -22,7 +22,6 @@
         "ms.vss-work-web.work-hub-group"
       ],
       "properties": {
-        "iconName": "TaskList",
         "name": "Better checklist",
         "uri": "dist/index.html"
       }
