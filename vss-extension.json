@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "devops-ext-better-checklist",
   "publisher": "Grollmus GmbH",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "name": "Better checklist extension",
   "description": "Devops add-on for creating and managing checklists",
   "public": false,
