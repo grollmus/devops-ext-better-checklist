@@ -1,7 +1,6 @@
-import { createRoot } from 'react-dom/client'
-import * as React from "react";
+import { DOMElement, DOMAttributes } from "react";
+import ReactDOM from "react-dom";
 
-
-export function showRootComponent(component: React.ReactElement<any>) {
-    createRoot(document.getElementById("root")!).render(component);
+export function showRootComponent(component: DOMElement<DOMAttributes<Element>, Element>) {
+    ReactDOM.render(component, document.getElementById("root"));
 }
