@@ -1,7 +1,7 @@
 import * as React from "react";
 import {JSX} from "react";
 import * as SDK from "azure-devops-extension-sdk";
-import {showRootComponent} from "../Common";
+import {showRootComponent} from "../common";
 
 export class HomePage extends React.Component<{}, {}> {
     public componentDidMount() {
