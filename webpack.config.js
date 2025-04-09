@@ -5,8 +5,8 @@ const entries = {};
 const srcDir = path.join(__dirname, "src");
 
 fs.readdirSync(srcDir)
-    .filter(dir => fs.statSync(path.join(srcDir, dir)).isDirectory())
-    .forEach(dir => (entries[dir] = "./" + path.join("src", dir, dir)));
+  .filter((dir) => fs.statSync(path.join(srcDir, dir)).isDirectory())
+  .forEach((dir) => (entries[dir] = "./" + path.join("src", dir, dir)));
 
 module.exports = {
   target: "web",
@@ -17,29 +17,29 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     server: {
-      type: "http"
+      type: "http",
     },
     port: 3000,
     static: {
       directory: path.join(__dirname, "dist"),
-    }
+    },
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
     alias: {
       "azure-devops-extension-sdk": path.resolve(
-          "node_modules/azure-devops-extension-sdk"
-      )
-    }
+        "node_modules/azure-devops-extension-sdk"
+      ),
+    },
   },
   stats: {
-    warnings: false
+    warnings: false,
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader"
+        use: "ts-loader",
       },
       {
         test: /\.scss$/,
@@ -47,30 +47,30 @@ module.exports = {
           "style-loader",
           "css-loader",
           "azure-devops-ui/buildScripts/css-variables-loader",
-          "sass-loader"
-        ]
+          "sass-loader",
+        ],
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.woff$/,
         use: [
           {
-            loader: "base64-inline-loader"
-          }
-        ]
+            loader: "base64-inline-loader",
+          },
+        ],
       },
       {
         test: /\.html$/,
-        use: "file-loader"
-      }
-    ]
+        use: "file-loader",
+      },
+    ],
   },
-  plugins: [new CopyWebpackPlugin({
-    patterns: [
-      { from: "**/*.html", context: "src" }
-    ]
-  })]
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [{ from: "**/*.html", context: "src" }],
+    }),
+  ],
 };
