@@ -2,6 +2,9 @@ import * as React from "react";
 import { Card } from "azure-devops-ui/Card";
 import { Header, IHeaderBreakpointCommandItem, TitleSize } from "azure-devops-ui/Header";
 import { Page } from "azure-devops-ui/Page";
+import { showRootComponent } from "../common";
+
+
 export default class HeaderExample extends React.Component<{}> {
     barItems: IHeaderBreakpointCommandItem[] = [
         {
@@ -31,3 +34,5 @@ export default class HeaderExample extends React.Component<{}> {
         );
     }
 }
+
+showRootComponent(<HeaderExample />);
