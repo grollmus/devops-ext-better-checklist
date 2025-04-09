@@ -1,7 +1,7 @@
 {
   "name": "devops-ext-better-checklist",
   "description": "Devops add-on for creating and managing checklists",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "author": "Gollmuss München GmbH",
   "keywords": [
     "azure-devops",
