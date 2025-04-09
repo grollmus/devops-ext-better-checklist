@@ -3,7 +3,7 @@
   "id": "devops-ext-better-checklist",
   "name": "Better checklist extension",
   "publisher": "Grollmus GmbH",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Devops add-on for creating and managing checklists",
   "public": false,
   "categories": [
@@ -14,7 +14,9 @@
       "id": "Microsoft.VisualStudio.Services"
     }
   ],
-  "demands": ["api-version/3.0"],
+  "demands": [
+    "api-version/3.0"
+  ],
   "icons": {
     "default": "static/images/logo.png"
   },
@@ -27,7 +29,7 @@
       ],
       "properties": {
         "name": "Better checklist",
-        "uri": "dist/home.html"
+        "uri": "dist/home/home.html"
       }
     }
   ],
