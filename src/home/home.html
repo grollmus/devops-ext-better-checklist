@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello World</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script>
+        window.requirejs.config({
+            enforceDefine: true,
+            paths: {
+                'SDK': './lib/SDK.min'
+            }
+        });
+        window.requirejs(['SDK'], function (SDK) {
+            if (typeof SDK !== 'undefined') {
+                console.log("SDK is defined. Trying to initialize...");
+                SDK.init();
+                SDK.ready().then(() => {
+                    console.log("SDK is ready");
+                    document.getElementById("name").innerText = SDK.getUser().displayName;
+                });
+            } else {
+                console.log('SDK is not defined');
+            }
+        });
+    </script>
+
     <style>
         :root {
             --bg-color: #001f3f;
@@ -51,19 +75,23 @@
             0% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0.6;
             }
+
             100% {
                 opacity: 1;
             }
         }
     </style>
 </head>
+
 <body>
-<div class="card">
-    <h1>Hello World! 👋</h1>
-    <p class="pulse">Welcome to your beautiful HTML start page</p>
-</div>
+    <div class="card">
+        <h1>Hello World! 👋</h1>
+        <p class="pulse">Welcome to your beautiful HTML start page</p>
+    </div>
 </body>
+
 </html>

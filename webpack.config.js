@@ -18,9 +18,9 @@ module.exports = {
     server: {
       type: "http",
     },
-    port: 3000,    
+    port: 3000,
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, "dist"),
     },
   },
   plugins: [
@@ -51,5 +51,10 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js"],
+    alias: {
+      "azure-devops-extension-sdk": path.resolve(
+        "node_modules/azure-devops-extension-sdk"
+      ),
+    },
   },
 };
