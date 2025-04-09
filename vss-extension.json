@@ -20,13 +20,13 @@
       "properties": {
         "iconName": "TaskList",
         "name": "Better checklist",
-        "uri": "my-hub.html"
+        "uri": "dist/my-hub.html"
       }
     }
   ],
   "files": [
     {
-      "path": "src/my-hub.html",
+      "path": "dist",
       "addressable": true
     },
     {
