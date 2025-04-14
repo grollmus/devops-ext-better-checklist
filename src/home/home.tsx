@@ -2,7 +2,7 @@ import * as React from "react";
 import { Card } from "azure-devops-ui/Card";
 import { Header, IHeaderBreakpointCommandItem, TitleSize } from "azure-devops-ui/Header";
 import { Page } from "azure-devops-ui/Page";
-import { showRootComponent } from "../common";
+import { showRootComponent } from "../wrapper";
 
 
 export default class HeaderExample extends React.Component<{}> {
@@ -28,7 +28,7 @@ export default class HeaderExample extends React.Component<{}> {
                 />
 
                 <div className="page-content page-content-top">
-                    <Card>Page content</Card>
+                    <Card>Page content 123</Card>
                 </div>
             </Page>
         );

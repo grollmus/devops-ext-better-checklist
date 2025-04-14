@@ -1,0 +1,18 @@
+{
+    "id": "devops-ext-better-checklist",
+    "public": false,
+    "baseUri": "https://localhost:3000",
+    "contributions": [
+        {
+            "id": "devops-ext-better-checklist-dev",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-work-web.work-hub-group"
+            ],
+            "properties": {
+                "name": "Better checklist",
+                "uri": "/home.html"
+            }
+        }
+    ]
+}

@@ -8,6 +8,9 @@ fs.readdirSync(srcDir)
   .filter((dir) => fs.statSync(path.join(srcDir, dir)).isDirectory())
   .forEach((dir) => (entries[dir] = "./" + path.join("src", dir, dir)));
 
+console.log("Entries: ", entries);
+console.log("Source Directory: ", srcDir);
+
 module.exports = {
   target: "web",
   entry: entries,
@@ -17,11 +20,13 @@ module.exports = {
   devtool: "inline-source-map",
   devServer: {
     server: {
-      type: "http",
+      type: "https",
     },
+    hot: true,
     port: 3000,
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, "dist/home"),
+      watch: true,
     },
   },
   resolve: {

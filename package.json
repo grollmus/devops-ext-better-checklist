@@ -1,7 +1,7 @@
 {
   "name": "devops-ext-better-checklist",
   "description": "Devops add-on for creating and managing checklists",
-  "version": "0.1.11",
+  "version": "0.1.14",
   "author": "Gollmuss München GmbH",
   "keywords": [
     "azure-devops",
@@ -11,7 +11,6 @@
   "license": "ISC",
   "scripts": {
     "clean": "rimraf ./dist ./out",
-    "initdev:npm": "npm install",
     "compile": "npm run clean && webpack --mode production --config webpack.config.js",
     "compile:dev": "npm run clean && webpack --mode development --config webpack.config.js",
     "package": "npm run compile && tfx extension create --manifest-globs vss-extension.json --output-path out",
@@ -23,6 +22,7 @@
   "devDependencies": {
     "@types/react": "^16.14.63",
     "@types/react-dom": "^16.9.25",
+    "@types/webpack-env": "^1.18.8",
     "@webpack-cli/generators": "^3.0.7",
     "base64-inline-loader": "^2.0.1",
     "copy-webpack-plugin": "^13.0.0",
