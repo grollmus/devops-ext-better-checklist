@@ -1,18 +1,24 @@
 name: build
-on: push
-  
+on:
+  push:
+  pull_request:
+
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
-      
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          
+
       - name: install npm dependencies
         run: npm install
-        
+
+      - name: check file linting
+        run: npm run lint
+
       - name: build extension
         run: npm run compile
