@@ -14,6 +14,12 @@
 - ✏️ Modify templates to adapt to evolving workflows
 - ✅ Track task progress within Azure DevOps
 
+## 💡 Usage
+
+1. Create a new checklist template with predefined steps.
+2. Apply the template to recurring tasks to maintain standardization.
+3. Track progress and completion status across multiple instances.
+
 ## 🛠 Development Setup
 
 To get started with local development:
@@ -22,11 +28,11 @@ To get started with local development:
    ```sh
    git clone https://github.com/grollmus/devops-ext-better-checklist.git
    cd devops-ext-better-checklist
-   ````
+   ```
 2. Install dependencies
    ```sh
    npm install
-   ````
+   ```
 3. Start the local development server
    ```sh
    npm run compile:dev
@@ -40,13 +46,18 @@ To get started with local development:
 6. Go to extension page
    [Organization] -> [Project] -> Boards -> Better Checklist
 
-## 💡 Usage
+## 🧼 Code quality
 
-1. Create a new checklist template with predefined steps.
-2. Apply the template to recurring tasks to maintain standardization.
-3. Track progress and completion status across multiple instances.
+### Git Hooks with Husky
+
+This project uses [Husky](https://typicode.github.io/husky/) to run checks automatically during common Git operations. Hooks are set up automatically when running npm install. No additional steps required.
+
+**Current hook**
+
+- `pre-commit`: Runs `npm run lint` to catch issues before committing
 
 ## 🤝 Contributing
+
 Contributions are welcome!
 If you have ideas, suggestions, or improvements:
 
