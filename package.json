@@ -19,7 +19,8 @@
     "publish:dev": "npm run compile:dev && tfx extension publish --manifest-globs vss-extension.json --output-path out",
     "start:dev": "webpack-dev-server --mode development",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx --fix"
+    "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --ext .js,.jsx,.ts,.tsx --fix",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@types/react": "^16.14.63",
@@ -40,6 +41,7 @@
     "eslint-plugin-prettier": "^5.2.6",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
+    "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "sass": "^1.86.3",
     "sass-loader": "^16.0.5",
