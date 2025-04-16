@@ -12,6 +12,7 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
+      tsx: true,
     },
   },
   env: {
