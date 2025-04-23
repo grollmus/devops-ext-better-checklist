@@ -36,6 +36,10 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.test.tsx', '**/*.spec.tsx'] },
+    ],
   },
   settings: {
     react: {
