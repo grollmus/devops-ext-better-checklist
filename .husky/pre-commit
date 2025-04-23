@@ -1,3 +1,3 @@
 #!/bin/sh
 
-powershell .husky/pre-push.ps1
+powershell .husky/pre-commit.ps1

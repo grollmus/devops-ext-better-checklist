@@ -12,7 +12,7 @@ $redCross = @{
 
 try {
   Write-Host ""
-  Write-Host "*** Pre Push Hook ***"
+  Write-Host "*** Pre Commit Hook ***"
   Write-Host "======================================"
 
 
