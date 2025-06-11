@@ -23,6 +23,13 @@ try {
     throw "Linting failed: $lintResult"
   }
 
+  # Run tests
+  Write-Host "Running tests..."
+  $testResult = npm run test 2>&1
+  if ($LASTEXITCODE -ne 0) {
+    throw "Tests failed: $testResult"
+  }
+
   Write-Host "======================================"
   Write-Host @greenCheck
   Write-Host " Checks passed, proceeding with push."
