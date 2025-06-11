@@ -32,12 +32,12 @@ try {
 
   Write-Host "======================================"
   Write-Host @greenCheck
-  Write-Host " Checks passed, proceeding with push."
+  Write-Host " Checks passed, proceeding with commit."
 } catch {
   Write-Error $_.Exception.Message
   Write-Host "======================================"
   Write-Host @redCross
-  Write-Host " Checks failed, push aborted."
+  Write-Host " Checks failed, commit aborted."
   Write-Host "**Please note: the file causing the problem might not be committed yet.**"
   exit 1
 }
