@@ -33,5 +33,4 @@ function HeaderExample(): React.ReactElement {
 
 export default HeaderExample;
 
-// TODO: fix error when running tests
 showRootComponent(<HeaderExample />);
