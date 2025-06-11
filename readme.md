@@ -54,7 +54,9 @@ This project uses [Husky](https://typicode.github.io/husky/) to run checks autom
 
 **Current hook**
 
-- `pre-commit`: Runs `npm run lint` to catch issues before committing
+- `pre-commit`: Runs commands to catch issues before committing
+  - `npm run lint`: code styling
+  - `npm run test`: automated unit test execution
 
 ## 🤝 Contributing
 

@@ -15,6 +15,7 @@ module.exports = {
       tsx: true,
     },
   },
+  ignorePatterns: ['/*', '!/src'],
   env: {
     browser: true,
     es2021: true,
@@ -35,6 +36,10 @@ module.exports = {
         ts: 'never',
         tsx: 'never',
       },
+    ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.test.tsx', '**/*.spec.tsx'] },
     ],
   },
   settings: {
